@@ -17,33 +17,77 @@ namespace ConsoleProject_08._12_08._16.Monsters
         public string dropItem;
         private bool yesNo;
 
-        public MonsterFactory(string name)
+        public MonsterFactory(Enums.MonsterType monType)
         {
             yesNo = true;
-            this.name = name;
             do
             {
-                if (this.name == "마그마슬라임")
+                if (monType == Enums.MonsterType.MagmaSlime)
                 {
                     Monster monster = new Monster();
-                    this.name = "마그마슬라임";
-                    this.hp = 100;
+                    this.name = "마그마 슬라임";
+                    this.hp = 50;
                     this.dmg = 10;
                     this.def = 3;
                     this.dropItem = "타고남은 재";
                     yesNo = false;
                 }
-                else
+                else if (monType == Enums.MonsterType.MagmaGolem)
                 {
-                    name = null;
-                    Console.WriteLine("잘못된 값 입력");
+                    Monster monster = new Monster();
+                    this.name = "마그마 골렘";
+                    this.hp = 300;
+                    this.dmg = 25;
+                    this.def = 10;
+                    this.dropItem = "뜨거운 심장";
+                    yesNo = false;
+                }
+                else if(monType == Enums.MonsterType.IceSlime)
+                {
+                    Monster monster = new Monster();
+                    this.name = "아이스 슬라임";
+                    this.hp = 50;
+                    this.dmg = 10;
+                    this.def = 3;
+                    this.dropItem = "얼음 부스러기";
+                    yesNo = false;
+                }
+                else if(monType == Enums.MonsterType.IceGolem)
+                {
+                    Monster monster = new Monster();
+                    this.name = "아이스 골렘";
+                    this.hp = 300;
+                    this.dmg = 25;
+                    this.def = 10;
+                    this.dropItem = "얼어붙은 심장";
+                    yesNo = false;
+                }
+                else if(monType == Enums.MonsterType.EarthSlime)
+                {
+                    Monster monster = new Monster();
+                    this.name = "대지 슬라임";
+                    this.hp = 50;
+                    this.dmg = 10;
+                    this.def = 3;
+                    this.dropItem = "딱딱한 돌";
+                    yesNo = false;
+                }
+                else if (monType == Enums.MonsterType.EarthGolem)
+                {
+                    Monster monster = new Monster();
+                    this.name = "대지 골렘";
+                    this.hp = 300;
+                    this.dmg = 25;
+                    this.def = 10;
+                    this.dropItem = "딱딱한 심장";
+                    yesNo = false;
                 }
             } while(yesNo);
         }
 
-        public void TakeDamage(Monster monster, Player player) 
+        public void TakeDamage(Player player) 
         {
-            monster.hp -= (player.dmg - monster.def);
+            this.hp -= (this.def - player.dmg);
         }
         public void ItemDrop(string dropItem) { }
     }

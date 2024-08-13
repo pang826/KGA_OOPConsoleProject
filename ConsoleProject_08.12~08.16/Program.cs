@@ -6,7 +6,8 @@ namespace ConsoleProject_08._12_08._16
     {
         static void Main(string[] args)
         {
-            
+            Game game = new Game();
+            game.Run();
         }
     }
 }

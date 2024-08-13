@@ -15,22 +15,31 @@ namespace ConsoleProject_08._12_08._16.Scenes
 
         public override void Input()
         {
-            throw new NotImplementedException();
-        }
-
-        public override void Render()
-        {
-            throw new NotImplementedException();
+            
         }
 
         public override void Update()
         {
-            throw new NotImplementedException();
+            
+        }
+
+        public override void Render()
+        {
+            Console.WriteLine("=============================================================");
+            Console.WriteLine("||                                                         ||");
+            Console.WriteLine("||                                                         ||");
+            Console.WriteLine("||                                                         ||");
+            Console.WriteLine("||                         Wizard RPG                      ||");
+            Console.WriteLine("||                                                         ||");
+            Console.WriteLine("||                                                         ||");
+            Console.WriteLine("||                                                         ||");
+            Console.WriteLine("||                                                         ||");
+            Console.WriteLine("=============================================================");
         }
 
         public override void Exit()
         {
-            throw new NotImplementedException();
+            
         }
     }
 }

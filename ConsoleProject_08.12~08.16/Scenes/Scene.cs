@@ -10,11 +10,16 @@ namespace ConsoleProject_08._12_08._16.Scenes
     {
         Enums.SceneType sceneType;
         
+        
 
         public abstract void Enter();
+
         public abstract void Input();
-        public abstract void Render();
+
         public abstract void Update();
+
+        public abstract void Render();
+
         public abstract void Exit();
     }
 }
