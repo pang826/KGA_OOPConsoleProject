@@ -8,6 +8,9 @@ namespace ConsoleProject_08._12_08._16.Scenes
 {
     internal class StartScene : Scene
     {
+        
+        public StartScene(Game game) : base(game) { }
+
         public override void Enter()
         {
             
@@ -15,12 +18,13 @@ namespace ConsoleProject_08._12_08._16.Scenes
 
         public override void Input()
         {
-            
+            Console.ReadKey();
         }
 
         public override void Update()
         {
-            
+            game.curscene = game.scenes[(int)Enums.SceneType.Choice];
+            game.curscene.Enter();
         }
 
         public override void Render()
@@ -35,6 +39,8 @@ namespace ConsoleProject_08._12_08._16.Scenes
             Console.WriteLine("||                                                         ||");
             Console.WriteLine("||                                                         ||");
             Console.WriteLine("=============================================================");
+            Console.WriteLine();
+            Console.WriteLine("시작하려면 아무키나 누르세요");
         }
 
         public override void Exit()

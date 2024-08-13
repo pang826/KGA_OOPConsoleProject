@@ -8,6 +8,7 @@ namespace ConsoleProject_08._12_08._16.Scenes
 {
     internal class Hospital : Scene
     {
+        public Hospital(Game game) : base(game) { }
         public override void Enter()
         {
 

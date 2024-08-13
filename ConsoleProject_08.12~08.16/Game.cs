@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleProject_08._12_08._16
 {
-    internal class Game
+    public class Game
     {
         private bool isRunning;
 
@@ -17,14 +17,14 @@ namespace ConsoleProject_08._12_08._16
         public Game()
         {
             scenes = new Scene[(int)Enums.SceneType.size];
-            scenes[(int)Enums.SceneType.StartScene] = new StartScene();
-            scenes[(int)Enums.SceneType.Choice] = new Choice();
-            scenes[(int)Enums.SceneType.Village] = new Village();
-            scenes[(int)Enums.SceneType.Reinforce] = new Reingforce();
-            scenes[(int)Enums.SceneType.SkillState] = new SkillState();
-            scenes[(int)Enums.SceneType.HuntingGround] = new HuntingGround();
-            scenes[(int)Enums.SceneType.Store] = new Store();
-            scenes[(int)Enums.SceneType.Hospital] = new Hospital();
+            scenes[(int)Enums.SceneType.StartScene] = new StartScene(this);
+            scenes[(int)Enums.SceneType.Choice] = new Choice(this);
+            scenes[(int)Enums.SceneType.Village] = new Village(this);
+            scenes[(int)Enums.SceneType.Reinforce] = new Reingforce(this);
+            scenes[(int)Enums.SceneType.SkillState] = new SkillState(this);
+            scenes[(int)Enums.SceneType.HuntingGround] = new HuntingGround(this);
+            scenes[(int)Enums.SceneType.Store] = new Store(this);
+            scenes[(int)Enums.SceneType.Hospital] = new Hospital(this);
         }
 
         public void Run()
@@ -32,19 +32,29 @@ namespace ConsoleProject_08._12_08._16
             Start();
             while (isRunning)
             {
-                Input();
                 Render();
+                Input();
                 Update();
             }
             End();
+        }
+
+        public void ChangeScene(Enums.SceneType sceneType)
+        {
+            curscene = scenes[(int)sceneType];
+            curscene.Enter();
         }
         public void Start()
         {
             this.isRunning = true;
 
             curscene = scenes[(int)Enums.SceneType.StartScene];
+            curscene.Enter();
         }
-
+        public void GameOver()
+        {
+            this.isRunning = false; 
+        }
         public void End()
         { 
             this.isRunning = false;

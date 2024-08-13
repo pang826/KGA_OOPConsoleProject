@@ -6,11 +6,15 @@ using System.Threading.Tasks;
 
 namespace ConsoleProject_08._12_08._16.Scenes
 {
+    
     public abstract class Scene
     {
-        Enums.SceneType sceneType;
-        
-        
+        public Enums.SceneType SceneType;
+        protected Game game;
+        public Scene(Game game)
+        {
+            this.game = game;
+        }
 
         public abstract void Enter();
 
