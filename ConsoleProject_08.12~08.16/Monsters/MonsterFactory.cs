@@ -9,7 +9,7 @@ namespace ConsoleProject_08._12_08._16.Monsters
 {
     public class MonsterFactory
     {
-        Player player;
+        Enums.MonsterType monsterType;
         public string name {  get; set; }
         public int hp {  get; set; }
         public int dmg {  get; set; }
@@ -85,10 +85,7 @@ namespace ConsoleProject_08._12_08._16.Monsters
             } while(yesNo);
         }
 
-        public void TakeDamage(Player player) 
-        {
-            this.hp -= (this.def - player.dmg);
-        }
-        public void ItemDrop(string dropItem) { }
+        
+
     }
 }

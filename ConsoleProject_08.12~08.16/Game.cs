@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ConsoleProject_08._12_08._16.Players;
 
 namespace ConsoleProject_08._12_08._16
 {
@@ -13,7 +14,7 @@ namespace ConsoleProject_08._12_08._16
 
         public Scene curscene;
         public Scene[] scenes;
-
+        public Player player;
         public Game()
         {
             scenes = new Scene[(int)Enums.SceneType.size];
@@ -36,11 +37,12 @@ namespace ConsoleProject_08._12_08._16
                 Input();
                 Update();
             }
-            End();
+            GameOver();
         }
 
         public void ChangeScene(Enums.SceneType sceneType)
         {
+            End();
             curscene = scenes[(int)sceneType];
             curscene.Enter();
         }
@@ -57,7 +59,7 @@ namespace ConsoleProject_08._12_08._16
         }
         public void End()
         { 
-            this.isRunning = false;
+            curscene.Exit();
         }
 
         public void Input()

@@ -9,7 +9,7 @@ namespace ConsoleProject_08._12_08._16.Players
 {
     public class Player
     {
-        public Enums.JobType jobType;
+        public Enums.JobType JobType;
         public string name;
         public int maxHp {  get; set; }
         public int curHp {  get; set; }
@@ -19,49 +19,20 @@ namespace ConsoleProject_08._12_08._16.Players
         public int def {  get; set; }
         public int gold { get; set; }
         public int evasion { get; set; }
+        public string[] inventory;
 
-        public void ChoiceJob(Enums.JobType jobType)
+        public void PrintStat()
         {
-            bool jobConfirm = false;
-            do // 1차 반복문(1번째 입력을 제대로 할때까지 반복)
-            {
-                Console.WriteLine("직업을 선택해주세요.");
-                Console.WriteLine($"1. 불마법사 // 2. 얼음마법사 // 3. 땅마법사");
-                Enum.TryParse(Console.ReadLine(), out jobType);
-                bool jobInput = Enum.IsDefined(jobType);
-                
-                if (jobInput == true)
-                {
-                    this.jobType = jobType;
-                    do // 2차 반복문(2번째 입력을 제대로 할때까지 반복)
-                    {
-                        Console.WriteLine($"당신은 {jobType}입니다.");
-                        Console.WriteLine("확정하시겠습니까?");
-                        Console.WriteLine("Y/N");
-                        string confirm = Console.ReadLine();
-                        if (confirm == "Y")
-                        {
-                            // 다음 씬으로 넘어가는 명령
-                            jobConfirm = true;
-                        }
-                        else if (confirm == "N")
-                        {
-                            continue;
-                        }
-                        else
-                        {
-                            Console.WriteLine("잘못된 값을 입력하였습니다.");
-                            continue;
-                        }
-                    } while (jobConfirm == false);
-                }
-                else
-                {
-                    Console.WriteLine("잘못된 값을 입력하였습니다.");
-                    continue;
-                }
-            } while (jobConfirm == false);
+            Console.WriteLine(this.JobType);
+            Console.WriteLine(this.name);
+            Console.WriteLine($"전체체력 : {this.maxHp} / 현재체력 : {this.curHp}");
+            Console.WriteLine($"전체마나 : {this.maxMp} / 현재마나 : {this.curMp}");
+            Console.WriteLine($"데미지 : {this.dmg}");
+            Console.WriteLine($"방어력 : {this.def}");
+            Console.WriteLine($"골드량 : {this.gold}G");
+            Console.WriteLine($"회피력 : {this.evasion}G");
+            Console.WriteLine($"인벤토리 : {this.inventory}G");
         }
-        
+        // public void Skill();
     }
 }

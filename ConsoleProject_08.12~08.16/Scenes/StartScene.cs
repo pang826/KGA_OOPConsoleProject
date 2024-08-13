@@ -23,8 +23,7 @@ namespace ConsoleProject_08._12_08._16.Scenes
 
         public override void Update()
         {
-            game.curscene = game.scenes[(int)Enums.SceneType.Choice];
-            game.curscene.Enter();
+            game.ChangeScene(Enums.SceneType.Choice);
         }
 
         public override void Render()
