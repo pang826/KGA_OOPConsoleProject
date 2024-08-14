@@ -4,12 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ConsoleProject_08._12_08._16;
+using ConsoleProject_08._12_08._16.Inventorys;
+using ConsoleProject_08._12_08._16.Items;
 
 namespace ConsoleProject_08._12_08._16.Players
 {
     public abstract class Player
     {
+        public WeaponItem? curWeapon;
+        public ArmorItem? curArmor;
+        public Inventory inventory;
         public Enums.JobType JobType;
+
         public string name;
         public int maxHp {  get; set; }
         public int curHp {  get; set; }
@@ -19,7 +25,6 @@ namespace ConsoleProject_08._12_08._16.Players
         public int def {  get; set; }
         public int gold { get; set; }
         public int evasion { get; set; }
-        public string[] inventory;
         // attribute 추가 예정 (속성)
         public Player(string name, Enums.JobType jobType) 
         {
@@ -33,7 +38,7 @@ namespace ConsoleProject_08._12_08._16.Players
             this.def = 0;
             this.gold = 1000;
             this.evasion = 10;
-            this.inventory = new string[] { };
+            this.inventory = new Inventory();
         }
         public void PrintStat()
         {
@@ -46,10 +51,20 @@ namespace ConsoleProject_08._12_08._16.Players
             Console.WriteLine($"방어력 : {this.def}");
             Console.WriteLine($"골드량 : {this.gold}G");
             Console.WriteLine($"회피력 : {this.evasion}");
-            Console.WriteLine($"인벤토리 : {this.inventory}");
+            Console.Write("인벤토리 : ");
+            ShowInven();
+            Console.WriteLine();
             Console.WriteLine("=============================================");
         }
         
         public abstract void Skill();
+
+        public void ShowInven()
+        {
+            for(int i = 0; i < inventory.GetCount(); i++)
+            {
+                Console.WriteLine($"|{inventory[i]}|");
+            }
+        }
     }
 }

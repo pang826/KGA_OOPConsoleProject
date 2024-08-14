@@ -21,7 +21,7 @@ namespace ConsoleProject_08._12_08._16
             scenes[(int)Enums.SceneType.StartScene] = new StartScene(this);
             scenes[(int)Enums.SceneType.Choice] = new Choice(this);
             scenes[(int)Enums.SceneType.Village] = new Village(this);
-            scenes[(int)Enums.SceneType.Reinforce] = new Reingforce(this);
+            scenes[(int)Enums.SceneType.Reinforce] = new Reinforce(this);
             scenes[(int)Enums.SceneType.SkillState] = new SkillState(this);
             scenes[(int)Enums.SceneType.HuntingGround] = new HuntingGround(this);
             scenes[(int)Enums.SceneType.Store] = new Store(this);

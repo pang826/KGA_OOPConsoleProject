@@ -11,10 +11,7 @@ namespace ConsoleProject_08._12_08._16.Scenes
         
         public StartScene(Game game) : base(game) { }
 
-        public override void Enter()
-        {
-            
-        }
+        public override void Enter() { }
 
         public override void Input()
         {
@@ -28,23 +25,20 @@ namespace ConsoleProject_08._12_08._16.Scenes
 
         public override void Render()
         {
-            Console.WriteLine("=============================================================");
-            Console.WriteLine("||                                                         ||");
-            Console.WriteLine("||                                                         ||");
-            Console.WriteLine("||                                                         ||");
-            Console.WriteLine("||                         Wizard RPG                      ||");
-            Console.WriteLine("||                                                         ||");
-            Console.WriteLine("||                                                         ||");
-            Console.WriteLine("||                                                         ||");
-            Console.WriteLine("||                                                         ||");
-            Console.WriteLine("=============================================================");
-            Console.WriteLine();
-            Console.WriteLine("시작하려면 아무키나 누르세요");
+                Console.WriteLine("=============================================================");
+                Console.WriteLine("||                                                         ||");
+                Console.WriteLine("||               ☆                                         ||");
+                Console.WriteLine("||                                                         ||");
+                Console.WriteLine("||                         Wizard RPG                      ||");
+                Console.WriteLine("||                                                         ||");
+                Console.WriteLine("||                                                         ||");
+                Console.WriteLine("||                                         ☆               ||");
+                Console.WriteLine("||                                                         ||");
+                Console.WriteLine("=============================================================");
+                Console.WriteLine();
+                Console.WriteLine("시작하려면 아무키나 누르세요");
         }
 
-        public override void Exit()
-        {
-            
-        }
+        public override void Exit() { }
     }
 }
