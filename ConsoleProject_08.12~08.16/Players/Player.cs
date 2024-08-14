@@ -37,6 +37,7 @@ namespace ConsoleProject_08._12_08._16.Players
         }
         public void PrintStat()
         {
+            Console.WriteLine("=============================================");
             Console.WriteLine(this.JobType);
             Console.WriteLine(this.name);
             Console.WriteLine($"전체체력 : {this.maxHp} / 현재체력 : {this.curHp}");
@@ -44,8 +45,9 @@ namespace ConsoleProject_08._12_08._16.Players
             Console.WriteLine($"데미지 : {this.dmg}");
             Console.WriteLine($"방어력 : {this.def}");
             Console.WriteLine($"골드량 : {this.gold}G");
-            Console.WriteLine($"회피력 : {this.evasion}G");
-            Console.WriteLine($"인벤토리 : {this.inventory}G");
+            Console.WriteLine($"회피력 : {this.evasion}");
+            Console.WriteLine($"인벤토리 : {this.inventory}");
+            Console.WriteLine("=============================================");
         }
         
         public abstract void Skill();

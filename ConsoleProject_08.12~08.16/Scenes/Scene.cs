@@ -11,6 +11,7 @@ namespace ConsoleProject_08._12_08._16.Scenes
     {
         public Enums.SceneType SceneType;
         protected Game game;
+        protected string inputStr;
         public Scene(Game game)
         {
             this.game = game;

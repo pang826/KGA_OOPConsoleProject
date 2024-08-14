@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleProject_08._12_08._16
 {
-    internal class Waits
+    static public class Waits
     {
         public static void Wait(int second)
         {

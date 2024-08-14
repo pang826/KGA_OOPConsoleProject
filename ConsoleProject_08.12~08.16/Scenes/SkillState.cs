@@ -11,7 +11,9 @@ namespace ConsoleProject_08._12_08._16.Scenes
         public SkillState(Game game) : base(game) { }
         public override void Enter()
         {
-
+            Console.Clear();
+            Console.WriteLine("스킬창을 엽니다");
+            Waits.Wait(1);
         }
 
         public override void Input()

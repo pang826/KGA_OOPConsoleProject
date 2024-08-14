@@ -11,7 +11,9 @@ namespace ConsoleProject_08._12_08._16.Scenes
         public Reingforce(Game game) : base(game) { }
         public override void Enter()
         {
-
+            Console.Clear();
+            Console.WriteLine("대장간으로 이동합니다");
+            Waits.Wait(1);
         }
 
         public override void Input()

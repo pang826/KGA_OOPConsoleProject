@@ -11,7 +11,9 @@ namespace ConsoleProject_08._12_08._16.Scenes
         public HuntingGround(Game game) : base(game) { }
         public override void Enter()
         {
-
+            Console.Clear();
+            Console.WriteLine("사냥터로 진입합니다");
+            Waits.Wait(2);
         }
 
         public override void Input()

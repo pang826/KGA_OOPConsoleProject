@@ -11,7 +11,9 @@ namespace ConsoleProject_08._12_08._16.Scenes
         public Hospital(Game game) : base(game) { }
         public override void Enter()
         {
-
+            Console.Clear();
+            Console.WriteLine("병원으로 향합니다");
+            Waits.Wait(1);
         }
 
         public override void Input()

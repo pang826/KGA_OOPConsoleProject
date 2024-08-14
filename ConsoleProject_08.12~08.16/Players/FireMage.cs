@@ -12,7 +12,9 @@ namespace ConsoleProject_08._12_08._16.Players
             
         public override void Skill()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("스킬을 시전합니다.");
+            Waits.Wait(1);
+            Console.WriteLine("\"아이스 볼\"");
         }
     }
 }
