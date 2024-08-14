@@ -48,13 +48,13 @@ namespace ConsoleProject_08._12_08._16.Scenes
                     switch(jobType)
                     {
                         case Enums.JobType.FireMage:
-                            // firemage 객체생성
+                            game.player = new FireMage(nameInput, Enums.JobType.FireMage);
                             break;
                         case Enums.JobType.IceMage:
-                            // Icemage 객체생성
+                            game.player = new FireMage(nameInput, Enums.JobType.IceMage);
                             break;
                         case Enums.JobType.EarthMage:
-                            // Earthmage 객체생성
+                            game.player = new FireMage(nameInput, Enums.JobType.EarthMage);
                             break;
                     }
                 }
@@ -95,8 +95,8 @@ namespace ConsoleProject_08._12_08._16.Scenes
             else if(choiceState == ChoiceState.Confirm)
             {
                 Console.Clear();
-                // Console.WriteLine($"당신의 이름은 {game.player.name}입니다.");
-                // Console.WriteLine($"당신의 직업은 {game.player.JobType}입니다.");
+                Console.WriteLine($"당신의 이름은 {game.player.name}입니다.");
+                Console.WriteLine($"당신의 직업은 {game.player.JobType}입니다.");
                 // player 객체 얼추 만든 후 재수정 필요
 
                 Console.WriteLine("확정 하시겠습니까? Y/N");

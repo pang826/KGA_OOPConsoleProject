@@ -7,7 +7,7 @@ using ConsoleProject_08._12_08._16;
 
 namespace ConsoleProject_08._12_08._16.Players
 {
-    public class Player
+    public abstract class Player
     {
         public Enums.JobType JobType;
         public string name;
@@ -20,7 +20,21 @@ namespace ConsoleProject_08._12_08._16.Players
         public int gold { get; set; }
         public int evasion { get; set; }
         public string[] inventory;
-
+        // attribute 추가 예정 (속성)
+        public Player(string name, Enums.JobType jobType) 
+        {
+            this.name = name;
+            this.JobType = jobType;
+            this.maxHp = 100;
+            this.curHp = 100;
+            this.maxMp = 100;
+            this.curMp = 100;
+            this.dmg = 10;
+            this.def = 0;
+            this.gold = 1000;
+            this.evasion = 10;
+            this.inventory = new string[] { };
+        }
         public void PrintStat()
         {
             Console.WriteLine(this.JobType);
@@ -33,6 +47,7 @@ namespace ConsoleProject_08._12_08._16.Players
             Console.WriteLine($"회피력 : {this.evasion}G");
             Console.WriteLine($"인벤토리 : {this.inventory}G");
         }
-        // public void Skill();
+        
+        public abstract void Skill();
     }
 }

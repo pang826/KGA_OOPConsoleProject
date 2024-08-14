@@ -11,7 +11,9 @@ namespace ConsoleProject_08._12_08._16.Scenes
         public Village(Game game) : base(game) { }
         public override void Enter()
         {
-
+            Console.Clear();
+            Console.WriteLine("마을로 진입합니다");
+            Waits.Wait(2);
         }
 
         public override void Input()
@@ -26,7 +28,9 @@ namespace ConsoleProject_08._12_08._16.Scenes
 
         public override void Render()
         {
-
+            Console.Clear();
+            Console.WriteLine("마을이다");
+            game.player.PrintStat();
         }
 
         public override void Exit()

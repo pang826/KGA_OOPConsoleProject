@@ -76,5 +76,7 @@ namespace ConsoleProject_08._12_08._16
         { 
             curscene.Update();
         }
+
+        
     }
 }
