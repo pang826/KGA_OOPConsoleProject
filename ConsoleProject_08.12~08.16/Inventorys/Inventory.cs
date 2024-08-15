@@ -9,28 +9,28 @@ namespace ConsoleProject_08._12_08._16.Inventorys
 {
     public class Inventory
     {
-        public List<Item> inven;
+        public List<PlayerItem> inven;
 
         public Inventory()
         {
-            inven = new List<Item>(9);
+            inven = new List<PlayerItem>(9);
         }
 
         public int GetCount()
         {
             return inven.Count;
         }
-        public void AddItem(Item item)
+        public void AddItem(PlayerItem item)
         {
             inven.Add(item);
         }
 
-        public void RemoveItem(Item item)
+        public void RemoveItem(PlayerItem item)
         {
             inven.Remove(item);
         }
 
-        public Item this[int index]
+        public PlayerItem this[int index]
             {
                 get { return inven[index]; }
             }

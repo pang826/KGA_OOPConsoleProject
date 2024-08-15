@@ -36,7 +36,7 @@ namespace ConsoleProject_08._12_08._16.Players
             this.curMp = 100;
             this.dmg = 10;
             this.def = 0;
-            this.gold = 1000;
+            this.gold = 250;
             this.evasion = 10;
             this.inventory = new Inventory();
         }
@@ -63,7 +63,7 @@ namespace ConsoleProject_08._12_08._16.Players
         {
             for(int i = 0; i < inventory.GetCount(); i++)
             {
-                Console.WriteLine($"|{inventory[i]}|");
+                Console.WriteLine($"|{inventory[i].Name}|");
             }
         }
     }

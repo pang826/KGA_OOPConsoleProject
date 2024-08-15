@@ -7,7 +7,7 @@
         {
             Console.Clear();
             Console.WriteLine("마을로 진입합니다");
-            Waits.Wait(2);
+            Waits.Wait(1);
         }
 
         public override void Input()

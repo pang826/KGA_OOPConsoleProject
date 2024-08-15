@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ConsoleProject_08._12_08._16.Players;
+using ConsoleProject_08._12_08._16.Inventorys;
+using ConsoleProject_08._12_08._16.Items;
 
 namespace ConsoleProject_08._12_08._16
 {
@@ -15,6 +17,8 @@ namespace ConsoleProject_08._12_08._16
         public Scene curscene;
         public Scene[] scenes;
         public Player player;
+        public Inventory inventory;
+        public PlayerItem item;
         public Game()
         {
             scenes = new Scene[(int)Enums.SceneType.size];
