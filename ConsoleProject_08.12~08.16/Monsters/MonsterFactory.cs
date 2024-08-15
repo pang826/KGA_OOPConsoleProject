@@ -9,83 +9,39 @@ namespace ConsoleProject_08._12_08._16.Monsters
 {
     public class MonsterFactory
     {
-        Enums.MonsterType monsterType;
-        public string name {  get; set; }
-        public int hp {  get; set; }
-        public int dmg {  get; set; }
-        public int def;
-        public string dropItem;
-        private bool yesNo;
-
-        public MonsterFactory(Enums.MonsterType monType)
+        public static Monster SpawnMon(int num)
         {
-            yesNo = true;
-            do
-            {
-                if (monType == Enums.MonsterType.MagmaSlime)
+                if (num == (int)Enums.MonsterType.MagmaSlime)
                 {
-                    Monster monster = new Monster();
-                    this.name = "마그마 슬라임";
-                    this.hp = 50;
-                    this.dmg = 10;
-                    this.def = 3;
-                    this.dropItem = "타고남은 재";
-                    yesNo = false;
+                    MagmaSlime magmaSlime = new MagmaSlime();
+                    return magmaSlime;
                 }
-                else if (monType == Enums.MonsterType.MagmaGolem)
+                else if (num == (int)Enums.MonsterType.MagmaGolem)
                 {
-                    Monster monster = new Monster();
-                    this.name = "마그마 골렘";
-                    this.hp = 300;
-                    this.dmg = 25;
-                    this.def = 10;
-                    this.dropItem = "뜨거운 심장";
-                    yesNo = false;
+                    MagmaGolem magmaGolem = new MagmaGolem();
+                    return magmaGolem;
                 }
-                else if(monType == Enums.MonsterType.IceSlime)
+                else if(num == (int)Enums.MonsterType.IceSlime)
                 {
-                    Monster monster = new Monster();
-                    this.name = "아이스 슬라임";
-                    this.hp = 50;
-                    this.dmg = 10;
-                    this.def = 3;
-                    this.dropItem = "얼음 부스러기";
-                    yesNo = false;
+                    IceSlime iceSlime = new IceSlime();
+                    return iceSlime;
                 }
-                else if(monType == Enums.MonsterType.IceGolem)
+                else if(num == (int)Enums.MonsterType.IceGolem)
                 {
-                    Monster monster = new Monster();
-                    this.name = "아이스 골렘";
-                    this.hp = 300;
-                    this.dmg = 25;
-                    this.def = 10;
-                    this.dropItem = "얼어붙은 심장";
-                    yesNo = false;
+                    IceGolem iceGolem = new IceGolem();
+                    return iceGolem;
                 }
-                else if(monType == Enums.MonsterType.EarthSlime)
+                else if(num == (int)Enums.MonsterType.EarthSlime)
                 {
-                    Monster monster = new Monster();
-                    this.name = "대지 슬라임";
-                    this.hp = 50;
-                    this.dmg = 10;
-                    this.def = 3;
-                    this.dropItem = "딱딱한 돌";
-                    yesNo = false;
+                    EarthSlime earthSlime = new EarthSlime();
+                    return earthSlime;
                 }
-                else if (monType == Enums.MonsterType.EarthGolem)
+                else if (num == (int)Enums.MonsterType.EarthGolem)
                 {
-                    Monster monster = new Monster();
-                    this.name = "대지 골렘";
-                    this.hp = 300;
-                    this.dmg = 25;
-                    this.def = 10;
-                    this.dropItem = "딱딱한 심장";
-                    yesNo = false;
+                    EarthGolem earthGolem = new EarthGolem();
+                    return earthGolem;
                 }
-            } while(yesNo);
+                else { return null; }
         }
-
-        
-
     }
 }

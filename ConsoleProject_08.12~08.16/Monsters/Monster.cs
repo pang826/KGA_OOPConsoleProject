@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleProject_08._12_08._16.Monsters
 {
-    internal class Monster
+    public abstract class Monster
     {
         public string name { get; set; }
         public int hp { get; set; }
@@ -20,9 +20,6 @@ namespace ConsoleProject_08._12_08._16.Monsters
             this.hp -= (this.def - player.dmg);
         }
 
-        public void ItemDrop()
-        {
-
-        }
+        public abstract void ItemDrop();
     }
 }
