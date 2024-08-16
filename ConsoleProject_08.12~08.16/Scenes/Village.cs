@@ -13,12 +13,11 @@
         public override void Input()
         {
             inputStr = Console.ReadLine();
-
         }
 
         public override void Update()
         {
-            if (int.TryParse(inputStr, out int inputNum) && inputNum > 0 && inputNum < 6)
+            if (int.TryParse(inputStr, out int inputNum) && inputNum > 0 && inputNum < 7)
             {
                 switch (inputNum)
                 {
@@ -37,6 +36,9 @@
                     case 5:
                         game.ChangeScene(Enums.SceneType.Hospital);
                         break;
+                    case 6:
+                        game.ChangeScene(Enums.SceneType.InventoryCheck);
+                        break;
                 }
             }
             else { return; }
@@ -48,7 +50,7 @@
             game.player.PrintStat();
             Console.WriteLine();
             Console.WriteLine("이동할 장소를 선택하세요");
-            Console.WriteLine("1. 아이템 강화 // 2. 스킬 관리 // 3. 사냥터 이동 // 4. 상점 이동 // 5. 병원 이동");
+            Console.WriteLine("1. 아이템 강화 // 2. 스킬 관리 // 3. 사냥터 이동 // 4. 상점 이동 // 5. 병원 이동 // 6. 인벤토리 확인");
         }
 
         public override void Exit()

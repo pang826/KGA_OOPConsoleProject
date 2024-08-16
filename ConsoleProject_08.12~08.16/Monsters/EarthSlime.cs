@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConsoleProject_08._12_08._16.Items;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,11 +15,11 @@ namespace ConsoleProject_08._12_08._16.Monsters
             this.hp = 50;
             this.dmg = 10;
             this.def = 3;
-            this.dropItem = "딱딱한 돌";
+            dropItem = new DropItem("딱딱한 돌", "대지 슬라임의 부산물");
         }
         public override void ItemDrop()
         {
-
+            player.dropInventory.AddDropItem(dropItem);
         }
     }
 }

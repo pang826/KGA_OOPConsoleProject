@@ -8,8 +8,8 @@ namespace ConsoleProject_08._12_08._16
 {
     public class Enums
     {
-        public enum SceneType { StartScene, Choice, Village, Reinforce, SkillState, HuntingGround, Store, Hospital, size}
+        public enum SceneType { StartScene, Choice, Village, Reinforce, SkillState, HuntingGround, Store, Hospital, InventoryCheck, size}
         public enum JobType { FireMage =1 , IceMage, EarthMage}
-        public enum MonsterType { MagmaSlime, MagmaGolem, IceSlime, IceGolem, EarthSlime, EarthGolem}
+        public enum MonsterType { MagmaSlime = 1, MagmaGolem, IceSlime, IceGolem, EarthSlime, EarthGolem}
     }
 }

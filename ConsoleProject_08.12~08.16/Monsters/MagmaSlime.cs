@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ConsoleProject_08._12_08._16.Items;
 
 namespace ConsoleProject_08._12_08._16.Monsters
 {
@@ -14,11 +15,12 @@ namespace ConsoleProject_08._12_08._16.Monsters
             this.hp = 50;
             this.dmg = 10;
             this.def = 3;
-            this.dropItem = "타고남은 재";
+            dropItem = new DropItem("타고남은 재", "마그마 슬라임의 부산물");
+
         }
         public override void ItemDrop()
         {
-            
+            player.dropInventory.AddDropItem(dropItem);
         }
     }
 }

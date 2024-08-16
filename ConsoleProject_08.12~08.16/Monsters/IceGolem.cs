@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConsoleProject_08._12_08._16.Items;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,11 +15,11 @@ namespace ConsoleProject_08._12_08._16.Monsters
             this.hp = 300;
             this.dmg = 25;
             this.def = 10;
-            this.dropItem = "얼어붙은 심장";
+            dropItem = new DropItem("얼어붙은 심장", "아이스 골렘의 심장");
         }
         public override void ItemDrop()
         {
-
+            player.dropInventory.AddDropItem(dropItem);
         }
     }
 }

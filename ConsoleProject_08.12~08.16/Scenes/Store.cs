@@ -126,7 +126,7 @@ namespace ConsoleProject_08._12_08._16.Scenes
         {
             if (game.player.gold >= storeItem.Cost)
             {
-                game.player.inventory.AddItem(storeItem);
+                game.player.inventory.AddPlayerItem(storeItem);
                 game.player.gold -= storeItem.Cost;
                 Console.WriteLine($"{storeItem.Name}을 구매하였습니다.");
                 storeState = StoreState.Enter;
@@ -142,7 +142,7 @@ namespace ConsoleProject_08._12_08._16.Scenes
         {
             if (game.player.gold >= storeItem.Cost)
             {
-                game.player.inventory.AddItem(storeItem);
+                game.player.inventory.AddPlayerItem(storeItem);
                 game.player.gold -= storeItem.Cost;
                 Console.WriteLine($"{storeItem.Name}을 구매하였습니다.");
             }

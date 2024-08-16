@@ -19,6 +19,7 @@ namespace ConsoleProject_08._12_08._16
         public Player player;
         public Inventory inventory;
         public PlayerItem item;
+        public DropItem drop;
         public Game()
         {
             scenes = new Scene[(int)Enums.SceneType.size];
@@ -30,6 +31,7 @@ namespace ConsoleProject_08._12_08._16
             scenes[(int)Enums.SceneType.HuntingGround] = new HuntingGround(this);
             scenes[(int)Enums.SceneType.Store] = new Store(this);
             scenes[(int)Enums.SceneType.Hospital] = new Hospital(this);
+            scenes[(int)Enums.SceneType.InventoryCheck] = new InventoryCheck(this);
         }
 
         public void Run()

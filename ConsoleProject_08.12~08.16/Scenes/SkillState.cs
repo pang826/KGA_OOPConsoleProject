@@ -14,6 +14,7 @@ namespace ConsoleProject_08._12_08._16.Scenes
             Console.Clear();
             Console.WriteLine("스킬창을 엽니다");
             Waits.Wait(1);
+            
         }
 
         public override void Input()
@@ -23,7 +24,9 @@ namespace ConsoleProject_08._12_08._16.Scenes
 
         public override void Update()
         {
-
+            Console.WriteLine("미완성");
+            Waits.Wait(1);
+            game.ChangeScene(Enums.SceneType.Village);
         }
 
         public override void Render()
